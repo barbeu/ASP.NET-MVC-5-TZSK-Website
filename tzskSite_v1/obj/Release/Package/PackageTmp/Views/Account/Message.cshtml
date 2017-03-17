@@ -1,0 +1,6 @@
+﻿<div class="panel-heading">
+    <h2>@Session["Title"]</h2>
+</div>
+<h2 class="alert">@Session["Message"]</h2>
+<h2 class="alert">@Html.ActionLink((string)Session["nameLink"], (string)Session["nameView"], (string)Session["nameController"])</h2>
+

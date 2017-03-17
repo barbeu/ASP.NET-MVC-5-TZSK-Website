@@ -1,0 +1,48 @@
+﻿@model tzskSite_v1.Controllers.MapController.coordinates
+
+@{
+    ViewBag.Title = "Карта";
+}
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        var myMap,
+            myPlacemark;
+
+        function init() {
+            myMap = new ymaps.Map("map", {
+                center: [@Model.lat, @Model.lon],
+                zoom: 14
+            });
+
+            myPlacemark = new ymaps.Placemark([@Model.lat, @Model.lon], {
+                hintContent: '@Model.address',
+                balloonContent: '@Model.address'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</head>
+
+<div class="panel-primary">
+    <div class="panel-heading">
+        <h2>@ViewBag.Title.</h2>
+    </div>
+    @if (Session["id"] != null)
+    {
+        
+        <div class="container body-content" id="map" style="width: 1100px; height: 700px"></div>
+        <h2 class="alert" style="text-align: center;"> @Html.ActionLink("Назад", "Index", "Home") </h2>
+    }
+    else
+    {
+        <h2 class="alert">Ошибка Авторизации.</h2>
+        <h2 class="alert">@Html.ActionLink("Войти", "Login", "Account")</h2>
+    }
+</div>
+
+

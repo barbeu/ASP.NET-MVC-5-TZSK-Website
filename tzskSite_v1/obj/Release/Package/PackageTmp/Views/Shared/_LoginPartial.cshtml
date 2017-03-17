@@ -1,0 +1,13 @@
+﻿<ul class="nav navbar-nav navbar-right">
+    @if (Session["id"] != null)
+    {
+        <li> @Html.ActionLink("Обновить", "Index", "Home") </li>
+        <li> @Html.ActionLink("Здравствуйте, " + (string)Session["name"] + "!", "Index", "Home") </li>
+        <li> @Html.ActionLink("Выйти", "Exit", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" }) </li>         
+    }
+    else
+    {
+        <li> @Html.ActionLink("Выполнить вход", "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" }) </li>
+    }
+</ul>
+
