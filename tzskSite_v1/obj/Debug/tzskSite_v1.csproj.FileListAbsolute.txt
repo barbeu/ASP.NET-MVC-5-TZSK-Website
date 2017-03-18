@@ -100,3 +100,4 @@ C:\Users\barbeu\documents\visual studio 2015\Projects\tzskSite_v1\tzskSite_v1\bi
 C:\Users\barbeu\documents\visual studio 2015\Projects\tzskSite_v1\tzskSite_v1\bin\ru\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 C:\Users\barbeu\documents\visual studio 2015\Projects\tzskSite_v1\tzskSite_v1\obj\Debug\tzskSite_v1.dll
 C:\Users\barbeu\documents\visual studio 2015\Projects\tzskSite_v1\tzskSite_v1\obj\Debug\tzskSite_v1.pdb
+C:\Users\barbeu\documents\visual studio 2015\Projects\tzskSite_v1\tzskSite_v1\obj\Debug\tzskSite_v1.csprojResolveAssemblyReference.cache

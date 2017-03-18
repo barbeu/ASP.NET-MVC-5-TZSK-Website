@@ -1,0 +1,10 @@
+﻿@using tzskSite_v1.Models;
+@model MsgViewModel
+
+<div class="panel-heading">
+    <h2>@Model.Title</h2>
+</div>
+<h2 class="alert">@Model.Message</h2>
+<h2 class="alert">@Html.ActionLink(Model.nameLink, Model.nameView, Model.nameController)</h2>
+
+

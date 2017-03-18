@@ -12,6 +12,13 @@ namespace tzskSite_v1.Controllers
         [HttpPost]
         public ActionResult Map(string lon, string lat, string address)
         {
+            if (Session["id"] == null)
+                return RedirectToAction("Message", "Msg", null);
+
+            if (lon == null || lat == null || address == null )           
+                return RedirectToAction("Index", "Home", null);
+
+            //TODO: FixMe если отправлять пост запрос с левыми  данными (не через кнопку) будет отображаться
             coordinates coord = new coordinates();
             coord.lon = lon;
             coord.lat = lat;

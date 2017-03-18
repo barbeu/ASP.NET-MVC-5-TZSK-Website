@@ -18,11 +18,13 @@ namespace tzskSite.Controllers
        
         public ActionResult Index()
         {
-            DateTime dt = DateTime.Now;
             int id = 0;
-            if (Session["id"] != null)
+            if (Session["id"] == null)
+                return RedirectToAction("AuthError", "Msg", null);
+            else
                 id = (int)Session["id"];
-            
+
+            DateTime dt = DateTime.Now;                                    
             var tbUser = dbContext.tbUsers.FirstOrDefault(l => (l.cIsAdmin == true) && (l.id == id) );
             if( tbUser != null)
                 return View( dbContext.tbUserData.Where(l => l.cDate >= dt.Date).OrderBy(l => l.cDate).ToList() );
