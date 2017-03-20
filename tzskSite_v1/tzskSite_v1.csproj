@@ -130,7 +130,8 @@
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="tzskSitedb.lib">
+    <Reference Include="tzskSitedb.lib, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\tzskSite\tzskSitedb.lib\bin\Debug\tzskSitedb.lib.dll</HintPath>
     </Reference>
     <Reference Include="WebGrease">
@@ -199,11 +200,13 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MapController.cs" />
+    <Compile Include="Controllers\MsgController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="logs\Logger.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\MsgViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -247,7 +250,8 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\Map\Map.cshtml" />
-    <Content Include="Views\Account\Message.cshtml" />
+    <Content Include="Views\Msg\Message.cshtml" />
+    <Content Include="Views\Msg\AuthError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

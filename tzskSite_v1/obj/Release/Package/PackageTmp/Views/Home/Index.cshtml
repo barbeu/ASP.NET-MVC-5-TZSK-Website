@@ -7,51 +7,45 @@
 <div class="panel-heading">
     <h2>Замеры.</h2>
 </div>
-@if (Session["id"] != null)
-{
-    <div class="panel-body">
-        <table class="table">
-            <thead>
-                <tr class="alert-info">
-                    <th><h4>Дата</h4></th>
-                    <th><h4>Начало</h4></th>
-                    <th><h4>Конец</h4></th>
-                    <th><h4>ФИО</h4></th>
-                    <th><h4>Адрес</h4></th>
-                    <th><h4>Телефон</h4></th>
-                    <th><h4>Офис</h4></th>
-                    <th><h4>Коментарий</h4></th>
+<div class="panel-body">
+    <table class="table">
+        <thead>
+            <tr class="alert-info">
+                <th><h4>Дата</h4></th>
+                <th><h4>Начало</h4></th>
+                <th><h4>Конец</h4></th>
+                <th><h4>ФИО</h4></th>
+                <th><h4>Адрес</h4></th>
+                <th><h4>Телефон</h4></th>
+                <th><h4>Офис</h4></th>
+                <th><h4>Коментарий</h4></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (tbUserData item in Model)
+            {
+                <tr>
+                    <td>@item.cDate.Value.Date.ToString("d")</td>
+                    <td>@item.cTimeStart</td>
+                    <td>@item.cTimeEnd</td>
+                    <td>@item.cClientName</td>
+                    <td>
+                        @item.cClientAddress
+                        @using (Html.BeginRouteForm("Default", new { action = "Map", controller = "Map" }))
+                        {
+                            @Html.Hidden("lon", item.cLongtitude)
+                            @Html.Hidden("lat", item.cLatitude)
+                            @Html.Hidden("address", item.cClientAddress)
+                            <input type="submit" class="btn btn-primary btn-xs" value="Посмотреть" />
+                        }
+                    </td>
+                    <td>@item.cClientPhone</td>
+                    <td>@item.cOffice</td>
+                    <td>@item.cComment</td>
                 </tr>
-            </thead>
-            <tbody>
-                @foreach (tbUserData item in Model)
-                {
-                    <tr>
-                        <td>@item.cDate.Value.Date.ToString("d")</td>
-                        <td>@item.cTimeStart</td>
-                        <td>@item.cTimeEnd</td>
-                        <td>@item.cClientName</td>
-                        <td>
-                            @item.cClientAddress
-                            @using (Html.BeginRouteForm("Default", new { action = "Map", controller = "Map" }))
-                            {
-                                @Html.Hidden("lon", item.cLongtitude)
-                                @Html.Hidden("lat", item.cLatitude)
-                                @Html.Hidden("address", item.cClientAddress)
-                                <input type="submit" class="btn btn-primary btn-xs" value="Посмотреть" />
-                            }
-                        </td>
-                        <td>@item.cClientPhone</td>
-                        <td>@item.cOffice</td>
-                        <td>@item.cComment</td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-    </div>
-}
-else
-{
-    <h2 class="alert">Ошибка Авторизации.</h2>
-    <h2 class="alert">@Html.ActionLink("Войти", "Login", "Account")</h2>
-}
+            }
+        </tbody>
+    </table>
+</div>
+
+
