@@ -10,7 +10,7 @@
   </PropertyGroup>
   <ItemGroup>
     <File Include="Account/userLog.txt">
-      <publishTime>03/18/2017 12:07:04</publishTime>
+      <publishTime>03/21/2017 15:53:37</publishTime>
     </File>
     <File Include="ApplicationInsights.config">
       <publishTime>03/07/2017 16:21:57</publishTime>
@@ -22,40 +22,40 @@
       <publishTime>03/07/2017 16:21:57</publishTime>
     </File>
     <File Include="bin/EntityFramework.dll">
-      <publishTime>02/03/2015 09:32:26</publishTime>
+      <publishTime>03/02/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/EntityFramework.SqlServer.dll">
-      <publishTime>02/03/2015 09:32:26</publishTime>
+      <publishTime>03/02/2015 09:32:26</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>11/30/2016 16:07:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.DependencyCollector.dll">
-      <publishTime>07/12/2016 11:45:42</publishTime>
+      <publishTime>12/07/2016 11:45:42</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.PerfCounterCollector.dll">
-      <publishTime>07/12/2016 11:50:34</publishTime>
+      <publishTime>12/07/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.ServerTelemetryChannel.dll">
-      <publishTime>06/12/2016 15:15:48</publishTime>
+      <publishTime>12/06/2016 15:15:48</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Web.dll">
-      <publishTime>07/12/2016 11:49:10</publishTime>
+      <publishTime>12/07/2016 11:49:10</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.WindowsServer.dll">
-      <publishTime>07/12/2016 11:50:34</publishTime>
+      <publishTime>12/07/2016 11:50:34</publishTime>
     </File>
     <File Include="bin/Microsoft.ApplicationInsights.dll">
-      <publishTime>06/12/2016 15:09:52</publishTime>
+      <publishTime>12/06/2016 15:09:52</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
-      <publishTime>03/04/2015 17:07:22</publishTime>
+      <publishTime>04/03/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
-      <publishTime>03/04/2015 17:07:22</publishTime>
+      <publishTime>04/03/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
-      <publishTime>03/04/2015 17:07:22</publishTime>
+      <publishTime>04/03/2015 17:07:22</publishTime>
     </File>
     <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
       <publishTime>06/15/2015 02:06:24</publishTime>
@@ -91,7 +91,7 @@
       <publishTime>04/23/2012 15:23:58</publishTime>
     </File>
     <File Include="bin/Newtonsoft.Json.dll">
-      <publishTime>03/08/2014 20:33:56</publishTime>
+      <publishTime>08/03/2014 20:33:56</publishTime>
     </File>
     <File Include="bin/Owin.dll">
       <publishTime>11/27/2012 13:00:52</publishTime>
@@ -133,19 +133,19 @@
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/ru/EntityFramework.resources.dll">
-      <publishTime>02/03/2015 09:32:38</publishTime>
+      <publishTime>03/02/2015 09:32:38</publishTime>
     </File>
     <File Include="bin/ru/EntityFramework.SqlServer.resources.dll">
-      <publishTime>02/03/2015 09:32:38</publishTime>
+      <publishTime>03/02/2015 09:32:38</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.AspNet.Identity.Core.resources.dll">
-      <publishTime>03/04/2015 17:09:50</publishTime>
+      <publishTime>04/03/2015 17:09:50</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.AspNet.Identity.EntityFramework.resources.dll">
-      <publishTime>03/04/2015 17:09:52</publishTime>
+      <publishTime>04/03/2015 17:09:52</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.AspNet.Identity.Owin.resources.dll">
-      <publishTime>03/04/2015 17:09:52</publishTime>
+      <publishTime>04/03/2015 17:09:52</publishTime>
     </File>
     <File Include="bin/ru/Microsoft.Owin.Host.SystemWeb.resources.dll">
       <publishTime>02/13/2015 13:24:52</publishTime>
@@ -175,7 +175,7 @@
       <publishTime>01/28/2015 04:02:30</publishTime>
     </File>
     <File Include="bin/ru/System.Web.Optimization.resources.dll">
-      <publishTime>11/02/2014 15:28:42</publishTime>
+      <publishTime>02/11/2014 15:28:42</publishTime>
     </File>
     <File Include="bin/ru/System.Web.Razor.resources.dll">
       <publishTime>01/28/2015 04:02:40</publishTime>
@@ -196,7 +196,7 @@
       <publishTime>01/28/2015 04:02:18</publishTime>
     </File>
     <File Include="bin/System.Web.Optimization.dll">
-      <publishTime>11/02/2014 15:26:04</publishTime>
+      <publishTime>02/11/2014 15:26:04</publishTime>
     </File>
     <File Include="bin/System.Web.Razor.dll">
       <publishTime>01/28/2015 04:02:32</publishTime>
@@ -214,10 +214,10 @@
       <publishTime>03/20/2017 15:46:31</publishTime>
     </File>
     <File Include="bin/tzskSite_v1.dll">
-      <publishTime>03/20/2017 16:06:30</publishTime>
+      <publishTime>03/21/2017 16:19:13</publishTime>
     </File>
     <File Include="bin/WebGrease.dll">
-      <publishTime>10/09/2013 17:28:38</publishTime>
+      <publishTime>09/10/2013 17:28:38</publishTime>
     </File>
     <File Include="Content/bootstrap.css">
       <publishTime>03/09/2017 09:09:42</publishTime>
@@ -288,8 +288,11 @@
     <File Include="Scripts/_references.js">
       <publishTime>03/07/2017 16:21:37</publishTime>
     </File>
+    <File Include="Views/Account/hydra.cshtml">
+      <publishTime>03/21/2017 16:40:09</publishTime>
+    </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>03/16/2017 15:35:44</publishTime>
+      <publishTime>03/21/2017 16:33:45</publishTime>
     </File>
     <File Include="Views/Account/Message.cshtml">
       <publishTime>03/16/2017 13:10:33</publishTime>
@@ -313,7 +316,7 @@
       <publishTime>03/10/2017 09:59:29</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>03/18/2017 09:59:46</publishTime>
+      <publishTime>03/21/2017 16:42:41</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>03/07/2017 16:26:06</publishTime>

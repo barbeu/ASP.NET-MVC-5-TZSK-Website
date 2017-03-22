@@ -252,6 +252,7 @@
     <Content Include="Views\Map\Map.cshtml" />
     <Content Include="Views\Msg\Message.cshtml" />
     <Content Include="Views\Msg\AuthError.cshtml" />
+    <Content Include="Views\Account\hydra.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -18,25 +18,18 @@ namespace tzskSite.Controllers
             dbContext = new tzskSiteEntities();
         }
 
+        public ActionResult hydra ()
+        {
+            return View();
+        }
+
         //
         // GET: /Account/Login
         public ActionResult Login()
         {
-            //TODO : FIXME
-            ///////////////////////////////////////////////
-            string _ip = _get_IP_Client();
-            DateTime DateTimeBan = DateTime.Now;
-            var isUserBan = dbContext.tbBans.FirstOrDefault(l => (l.cIPaddress == _ip) && (l.cDateBan >= DateTimeBan));
-            if (isUserBan != null)
-                return RedirectToAction("Message", "Msg", new MsgViewModel
-                {
-                    Title = "Блокировка.",
-                    Message = "Произошло несколько неудачных попыток входа с этой учетной записи или IP-адреса. Подождите " + ((isUserBan.cDateBan - DateTime.Now).Minutes + 1) + " Мин. и повторите попытку.",
-                    nameLink = "Повторить",
-                    nameView = "Login",
-                    nameController = "Account"
-                });
-            ///////////////////////////////////////////////
+            if (isBlock() != null)
+                return RedirectToAction("Message", "Msg", isBlock());
+
             if (Session["id"] != null)
                 Session.Clear();
 
@@ -62,21 +55,9 @@ namespace tzskSite.Controllers
         [ValidateAntiForgeryToken]
         public RedirectToRouteResult Login(LoginViewModel model)
         {
-            //TODO : FIXME
-            ///////////////////////////////////////////////
-            string _ip = _get_IP_Client();
-            DateTime DateTimeBan = DateTime.Now;
-            var isUserBan = dbContext.tbBans.FirstOrDefault(l => (l.cIPaddress == _ip) && (l.cDateBan >= DateTimeBan));
-            if (isUserBan != null)
-                return RedirectToAction("Message", "Msg", new MsgViewModel
-                {
-                    Title = "Блокировка.",
-                    Message = "Произошло несколько неудачных попыток входа с этой учетной записи или IP-адреса. Подождите " + ((isUserBan.cDateBan - DateTime.Now ).Minutes+1) + " Мин. и повторите попытку.",
-                    nameLink = "Повторить",
-                    nameView = "Login",
-                    nameController = "Account"
-                });
-            ///////////////////////////////////////////////
+            if (isBlock() != null)
+                return RedirectToAction("Message", "Msg", isBlock());
+
             var user = dbContext.tbUsers.FirstOrDefault(l => (l.cLogin == model.Login) && (l.cPassword == model.Password));
             if (user != null)
             {
@@ -171,11 +152,29 @@ namespace tzskSite.Controllers
                 int le = ipRange.Length - 1;
                 string trueIP = ipRange[le];
             }
-            else
-            {
+            else          
                 _ip = Request.ServerVariables["REMOTE_ADDR"];
-            }
+                       
             return _ip;
+        }
+
+        private MsgViewModel isBlock ()
+        {
+            //FIXME 
+            string _ip = _get_IP_Client();
+            DateTime DateTimeBan = DateTime.Now;
+            var isUserBan = dbContext.tbBans.FirstOrDefault(l => (l.cIPaddress == _ip) && (l.cDateBan >= DateTimeBan));
+            if (isUserBan != null)
+            {
+                MsgViewModel msg = new MsgViewModel();
+                msg.Title = "Блокировка.";
+                msg.Message = "Произошло несколько неудачных попыток входа с этой учетной записи или IP-адреса. Подождите " + ((isUserBan.cDateBan - DateTime.Now).Minutes + 1) + " Мин. и повторите попытку.";
+                msg.nameLink = "Повторить";
+                msg.nameView = "Login";
+                msg.nameController = "Account";
+                return msg;
+            }
+            return null;           
         }
     }
 }
